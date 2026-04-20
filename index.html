@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amr Farahat | Data Science Engineer & NeuroAI Researcher</title>
     <meta name="description" content="Personal portfolio of Amr Farahat, Data Science Engineer and NeuroAI Researcher.">
-    <!-- Google Fonts -->
+    <!-- Google Fonts — monospace stack -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Fira+Code:wght@400;500;600&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,30 +21,45 @@
 </head>
 
 <body>
+    <!-- Ambient glow blobs -->
     <div class="blob-bg"></div>
     <div class="blob-bg blob-2"></div>
     <div class="blob-bg blob-3"></div>
 
+    <!-- ====== NAVBAR — editor tabs ====== -->
     <nav class="navbar">
         <div class="nav-content container">
             <a href="#" class="logo">AF<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
+                <li><a href="#hero">about.md</a></li>
+                <li><a href="#education">education.json</a></li>
+                <li><a href="#experience">experience.log</a></li>
+                <li><a href="#projects">projects.py</a></li>
+                <li><a href="#publications">publications.bib</a></li>
+                <li><a href="#qualifications">training.yml</a></li>
             </ul>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#hero" class="mobile-link">about.md</a>
+        <a href="#education" class="mobile-link">education.json</a>
+        <a href="#experience" class="mobile-link">experience.log</a>
+        <a href="#projects" class="mobile-link">projects.py</a>
+        <a href="#publications" class="mobile-link">publications.bib</a>
+        <a href="#qualifications" class="mobile-link">training.yml</a>
+    </div>
+
     <main>
-        <!-- Hero Section -->
+        <!-- ====== HERO — terminal window ====== -->
         <section id="hero" class="hero container">
             <div class="hero-content reveal">
                 <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Dr. Amr Farahat, MD, PhD</h1>
+                <h1 class="name"><span id="typed-name">Dr. Amr Farahat, MD, PhD</span><span class="typing-cursor"></span></h1>
                 <h2 class="title">Data Science Engineer & NeuroAI Researcher</h2>
                 <p class="summary">
                     Exploring the intersection of biological and artificial intelligence to decode the brain and develop
@@ -68,116 +82,132 @@
             </div>
         </section>
 
-        <!-- About / Education Section -->
+        <!-- ====== EDUCATION — git log style ====== -->
         <section id="education" class="container">
             <div class="section-header reveal">
-                <h2>Education</h2>
+                <h2>Education <span style="color: var(--text-muted); font-weight: 400;">{}</span></h2>
                 <div class="line"></div>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>PhD - International Max Planck Research School for Neural Circuits</h3>
-                        <h4>Frankfurt, Germany / Nijmegen, Netherlands</h4>
-                        <span class="date">2020 – 2025</span>
-                        <p>Donders Centre for Neuroscience, Radboud University</p>
-                        <p>Ernst Strüngmann Institute for Neuroscience in Cooperation with Max Planck Society</p>
-                        <p><strong>Thesis:</strong> On the predictive and explanative roles of deep neural networks in
-                            neuroscience.</p>
-                    </div>
+            <div class="code-window reveal">
+                <div class="code-window-titlebar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="filename">education.json</span>
                 </div>
+                <div class="code-window-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>PhD - International Max Planck Research School for Neural Circuits</h3>
+                                <h4>Frankfurt, Germany / Nijmegen, Netherlands</h4>
+                                <span class="date">2020 – 2025</span>
+                                <p>Donders Centre for Neuroscience, Radboud University</p>
+                                <p>Ernst Strüngmann Institute for Neuroscience in Cooperation with Max Planck Society</p>
+                                <p><strong>Thesis:</strong> On the predictive and explanative roles of deep neural networks in
+                                    neuroscience.</p>
+                            </div>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>MSc - Integrative Neurosciences</h3>
-                        <h4>Otto von Guericke University, Magdeburg, Germany</h4>
-                        <span class="date">2015 – 2018</span>
-                        <p><strong>Thesis:</strong> Deep Learning for EEG Decoding and Automatic Feature Discovery.</p>
-                        <!-- <p><strong>Grade:</strong> With distinction (1.2)</p> -->
-                    </div>
-                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>MSc - Integrative Neurosciences</h3>
+                                <h4>Otto von Guericke University, Magdeburg, Germany</h4>
+                                <span class="date">2015 – 2018</span>
+                                <p><strong>Thesis:</strong> Deep Learning for EEG Decoding and Automatic Feature Discovery.</p>
+                                <!-- <p><strong>Grade:</strong> With distinction (1.2)</p> -->
+                            </div>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>MD - Medical School</h3>
-                        <h4>Mansoura University, Mansoura, Egypt</h4>
-                        <span class="date">2007 - 2014</span>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>MD - Medical School</h3>
+                                <h4>Mansoura University, Mansoura, Egypt</h4>
+                                <span class="date">2007 - 2014</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
+        <!-- ====== EXPERIENCE — commit history ====== -->
         <section id="experience" class="container">
             <div class="section-header reveal">
-                <h2>Experience</h2>
+                <h2>Experience <span style="color: var(--text-muted); font-weight: 400;">()</span></h2>
                 <div class="line"></div>
             </div>
 
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>Data Science Engineer</h3>
-                        <h4>Green Fusion, Berlin, Germany</h4>
-                        <span class="date">2025 - Present</span>
-                    </div>
+            <div class="code-window reveal">
+                <div class="code-window-titlebar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="filename">experience.log</span>
                 </div>
+                <div class="code-window-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>Data Science Engineer</h3>
+                                <h4>Green Fusion, Berlin, Germany</h4>
+                                <span class="date">2025 - Present</span>
+                            </div>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>PhD Researcher</h3>
-                        <h4>Ernst Strüngmann Institute for Neuroscience in Cooperation with Max Planck Society,
-                            Frankfurt, Germany</h4>
-                        <span class="date">2020 - 2025</span>
-                    </div>
-                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>PhD Researcher</h3>
+                                <h4>Ernst Strüngmann Institute for Neuroscience in Cooperation with Max Planck Society,
+                                    Frankfurt, Germany</h4>
+                                <span class="date">2020 - 2025</span>
+                            </div>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>Predoctoral Researcher</h3>
-                        <h4>Max Planck Institute for Brain Research & Frankfurt Institute for Advanced Studies,
-                            Frankfurt, Germany</h4>
-                        <span class="date">2019 - 2020</span>
-                    </div>
-                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>Predoctoral Researcher</h3>
+                                <h4>Max Planck Institute for Brain Research & Frankfurt Institute for Advanced Studies,
+                                    Frankfurt, Germany</h4>
+                                <span class="date">2019 - 2020</span>
+                            </div>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>Neuroradiology Resident Doctor</h3>
-                        <h4>Otto von Guericke University Hospital, Magdeburg, Germany</h4>
-                        <span class="date">2019</span>
-                    </div>
-                </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>Neuroradiology Resident Doctor</h3>
+                                <h4>Otto von Guericke University Hospital, Magdeburg, Germany</h4>
+                                <span class="date">2019</span>
+                            </div>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>General Practitioner</h3>
-                        <h4>Ministry Of Health and Population, Ras Ghareb, Egypt</h4>
-                        <span class="date">2015</span>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card">
+                                <h3>General Practitioner</h3>
+                                <h4>Ministry Of Health and Population, Ras Ghareb, Egypt</h4>
+                                <span class="date">2015</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- ====== SKILLS — import style ====== -->
         <section id="skills" class="container">
             <div class="section-header reveal">
-                <h2>Skills & Languages</h2>
+                <h2>Skills & Languages <span style="color: var(--text-muted); font-weight: 400;">[]</span></h2>
                 <div class="line"></div>
             </div>
 
             <div class="skills-container reveal">
                 <div class="skill-category glass-card">
-                    <h3>Technical Skills</h3>
+                    <h3>TechnicalSkills</h3>
                     <div class="tags">
                         <span class="tag">Python</span>
                         <span class="tag">Tensorflow</span>
@@ -200,17 +230,17 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- ====== PROJECTS — code file cards ====== -->
         <section id="projects" class="container">
             <div class="section-header reveal">
-                <h2>Projects</h2>
+                <h2>Projects <span style="color: var(--text-muted); font-weight: 400;">()</span></h2>
                 <div class="line"></div>
             </div>
 
             <div class="projects-grid">
                 <div class="project-card glass-card reveal">
                     <img src="images/project_eeg.png" alt="Brain Computer Interface Project" class="project-image">
-                    <h3>Deep Learning for EEG Decoding and Automatic Feature Discovery</h3>
+                    <h3>DeepLearningEEGDecoding</h3>
                     <p>Developed CNN models for classifying P300 ERP component in EEG data for a Brain Computer
                         Interface (BCI) speller application. Used saliency maps to extract relevant spatial and temporal
                         EEG features.</p>
@@ -236,7 +266,7 @@
 
                 <div class="project-card glass-card reveal">
                     <img src="images/project_epilepsy.png" alt="Deep Anomaly Detection" class="project-image">
-                    <h3>Diagnosing Epileptogenesis with Deep Anomaly Detection</h3>
+                    <h3>DiagnosingEpileptogenesis</h3>
                     <p>Used data from a rodent epilepsy model to show the feasibility of an unsupervised deep anomaly
                         detection framework using adversarial autoencoders to detect subtle changes in brain electrical
                         activity.</p>
@@ -259,7 +289,7 @@
 
                 <div class="project-card glass-card reveal">
                     <img src="images/project_cnn.png" alt="Feature Scrambling in CNNs" class="project-image">
-                    <h3>Spatial Relations and Feature-Scrambling in CNNs</h3>
+                    <h3>SpatialRelationsCNN</h3>
                     <p>Developed a feature-scrambling approach to investigate the granularity of features used by CNNs
                         for object recognition and whether they encode spatial relations among features.</p>
                     <div class="project-links">
@@ -278,7 +308,7 @@
 
                 <div class="project-card glass-card reveal">
                     <img src="images/project_fmri.png" alt="fMRI and CNNs" class="project-image">
-                    <h3>Predicting Neural Responses with Random-Weight CNNs</h3>
+                    <h3>RandomWeightCNNPrediction</h3>
                     <p>Evaluated how well untrained and trained CNNs predict neural activity across the visual cortex in
                         humans and monkeys, varying architectural components.</p>
                     <div class="project-links">
@@ -297,7 +327,7 @@
 
                 <div class="project-card glass-card reveal">
                     <img src="images/project_motor.png" alt="7T fMRI Motor Learning" class="project-image">
-                    <h3>Investigating motor learning circuitry in a 7T functional connectivity fMRI study</h3>
+                    <h3>MotorLearning7TfMRI</h3>
                     <p>Investigated the neural circuitry underlying motor learning utilizing high-resolution 7T
                         functional connectivity fMRI to observe dynamic changes in brain networks.</p>
                     <div class="project-links">
@@ -319,89 +349,90 @@
             </div>
         </section>
 
-        <!-- Publications Section -->
+        <!-- ====== PUBLICATIONS — log-style ====== -->
         <section id="publications" class="container">
             <div class="section-header reveal">
-                <h2>Selected Publications</h2>
+                <h2>Selected Publications <span style="color: var(--text-muted); font-weight: 400;">[]</span></h2>
                 <div class="line"></div>
             </div>
 
-            <div class="publications-list">
-                <div class="publication-item glass-card reveal">
-                    <p>J. Liu, <strong>A. Farahat</strong>, and M. Vinck, "Representational drift shows same-class
-                        acceleration in visual cortex and artificial neural networks," bioRxiv, 2025.
-                        <br><a href="https://doi.org/10.1101/2025.11.05.686897" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1101/2025.11.05.686897</a>
-                    </p>
+            <div class="code-window reveal">
+                <div class="code-window-titlebar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="filename">publications.bib</span>
                 </div>
+                <div class="code-window-body">
+                    <div class="publications-list">
+                        <div class="publication-item glass-card">
+                            <p>J. Liu, <strong>A. Farahat</strong>, and M. Vinck, "Representational drift shows same-class
+                                acceleration in visual cortex and artificial neural networks," bioRxiv, 2025.
+                                <br><a href="https://doi.org/10.1101/2025.11.05.686897" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1101/2025.11.05.686897</a>
+                            </p>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong> and M. Vinck, "Neural responses in early, but not late, visual cortex
-                        are well predicted by random-weight CNNs with sufficient model complexity," bioRxiv, 2025.
-                        <br><a href="https://doi.org/10.1101/2025.02.05.636721" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1101/2025.02.05.636721</a>
-                    </p>
-                </div>
+                        <div class="publication-item glass-card">
+                            <p><strong>A. Farahat</strong> and M. Vinck, "Neural responses in early, but not late, visual cortex
+                                are well predicted by random-weight CNNs with sufficient model complexity," bioRxiv, 2025.
+                                <br><a href="https://doi.org/10.1101/2025.02.05.636721" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1101/2025.02.05.636721</a>
+                            </p>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p>A. Voegtle, L. Terzic, <strong>A. Farahat</strong>, et al., "Ventrointermediate thalamic
-                        stimulation improves motor learning in humans," Communications Biology, vol. 7, no. 1, p. 798,
-                        2024.
-                        <br><a href="https://doi.org/10.1038/s42003-024-06462-5" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1038/s42003-024-06462-5</a>
-                    </p>
-                </div>
+                        <div class="publication-item glass-card">
+                            <p>A. Voegtle, L. Terzic, <strong>A. Farahat</strong>, et al., "Ventrointermediate thalamic
+                                stimulation improves motor learning in humans," Communications Biology, vol. 7, no. 1, p. 798,
+                                2024.
+                                <br><a href="https://doi.org/10.1038/s42003-024-06462-5" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1038/s42003-024-06462-5</a>
+                            </p>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong>, F. Effenberger, and M. Vinck, "A novel feature-scrambling approach
-                        reveals the capacity of convolutional neural networks to learn spatial relations," Neural
-                        Networks, vol. 167, pp. 400–414, 2023.
-                        <br><a href="https://doi.org/10.1016/j.neunet.2023.08.021" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI:
-                            10.1016/j.neunet.2023.08.021</a>
-                    </p>
-                </div>
+                        <div class="publication-item glass-card">
+                            <p><strong>A. Farahat</strong>, F. Effenberger, and M. Vinck, "A novel feature-scrambling approach
+                                reveals the capacity of convolutional neural networks to learn spatial relations," Neural
+                                Networks, vol. 167, pp. 400–414, 2023.
+                                <br><a href="https://doi.org/10.1016/j.neunet.2023.08.021" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI:
+                                    10.1016/j.neunet.2023.08.021</a>
+                            </p>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p>L. Terzic, A. Voegtle, <strong>A. Farahat</strong>, et al., "Deep brain stimulation of the
-                        ventrointermediate nucleus of the thalamus to treat essential tremor improves motor sequence
-                        learning," Human Brain Mapping, 2022.
-                        <br><a href="https://doi.org/10.1002/hbm.25989" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1002/hbm.25989</a>
-                    </p>
-                </div>
+                        <div class="publication-item glass-card">
+                            <p>L. Terzic, A. Voegtle, <strong>A. Farahat</strong>, et al., "Deep brain stimulation of the
+                                ventrointermediate nucleus of the thalamus to treat essential tremor improves motor sequence
+                                learning," Human Brain Mapping, 2022.
+                                <br><a href="https://doi.org/10.1002/hbm.25989" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1002/hbm.25989</a>
+                            </p>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong>, D. Lu, S. Bauer, et al., "Diagnosing epileptogenesis with deep
-                        anomaly detection," Proceedings of the 7th Machine Learning for Healthcare Conference, vol. 182,
-                        2022.
-                        <br><a href="https://www.mlforhc.org/s/50-MLHC_2022.pdf" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>PMLR 182:1-18 (PDF)</a>
-                    </p>
-                </div>
+                        <div class="publication-item glass-card">
+                            <p><strong>A. Farahat</strong>, D. Lu, S. Bauer, et al., "Diagnosing epileptogenesis with deep
+                                anomaly detection," Proceedings of the 7th Machine Learning for Healthcare Conference, vol. 182,
+                                2022.
+                                <br><a href="https://www.mlforhc.org/s/50-MLHC_2022.pdf" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>PMLR 182:1-18 (PDF)</a>
+                            </p>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong>, C. Reichert, C. M. Sweeney-Reed, and H. Hinrichs, "Convolutional
-                        neural networks for decoding of covert attention focus and saliency maps for EEG feature
-                        visualization," Journal of neural engineering, vol. 16, no. 6, 2019.
-                        <br><a href="https://doi.org/10.1088/1741-2552/ab3bb4" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1088/1741-2552/ab3bb4</a>
-                    </p>
+                        <div class="publication-item glass-card">
+                            <p><strong>A. Farahat</strong>, C. Reichert, C. M. Sweeney-Reed, and H. Hinrichs, "Convolutional
+                                neural networks for decoding of covert attention focus and saliency maps for EEG feature
+                                visualization," Journal of neural engineering, vol. 16, no. 6, 2019.
+                                <br><a href="https://doi.org/10.1088/1741-2552/ab3bb4" target="_blank"><i class="fas fa-external-link-alt"
+                                        style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1088/1741-2552/ab3bb4</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Qualifications Section -->
+        <!-- ====== QUALIFICATIONS — training log ====== -->
         <section id="qualifications" class="container">
             <div class="section-header reveal">
-                <h2>Further Qualifications</h2>
+                <h2>Further Qualifications <span style="color: var(--text-muted); font-weight: 400;">()</span></h2>
                 <div class="line"></div>
             </div>
 
@@ -457,6 +488,24 @@
             <p>&copy; 2026 Amr Farahat</p>
         </div>
     </footer>
+
+    <!-- ====== VS Code-style status bar ====== -->
+    <div class="status-bar">
+        <div class="status-bar-left">
+            <span><i class="fab fa-github" style="margin-right: 4px;"></i> master</span>
+            <span>UTF-8</span>
+            <span>JavaScript</span>
+        </div>
+        <div class="status-bar-right">
+            <span>Ln 1, Col 1</span>
+            <span>Spaces: 4</span>
+        </div>
+    </div>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-adjust"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
