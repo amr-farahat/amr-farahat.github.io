@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,14 +28,16 @@
 
     <nav class="navbar">
         <div class="nav-content container">
-            <a href="#" class="logo">AF<span>.</span></a>
+            <a href="#" class="logo">AF_DEV_v2.0</a>
             <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
+                <li><a href="#hero">about.js</a></li>
+                <li><a href="#education">education.ts</a></li>
+                <li><a href="#experience">experience.log</a></li>
+                <li><a href="#projects">projects.py</a></li>
+                <li><a href="#publications">publications.bib</a></li>
+                <li><a href="#qualifications">skills.json</a></li>
+                <li><a href="#contact">contact.sh</a></li>
+                <li style="margin-left: auto;"><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
             </ul>
         </div>
     </nav>
@@ -43,69 +45,95 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero container">
-            <div class="hero-content reveal">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Dr. Amr Farahat, MD, PhD</h1>
-                <h2 class="title">Data Science Engineer & NeuroAI Researcher</h2>
-                <p class="summary">
-                    Exploring the intersection of biological and artificial intelligence to decode the brain and develop
-                    responsible intelligent systems.
-                </p>
-                <div class="social-links">
-                    <a href="mailto:amr.f.farahat@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/amr-farahat-738595151/" target="_blank"
-                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/amr-farahat" target="_blank" aria-label="GitHub"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://scholar.google.com/citations?user=cY_w0CIAAAAJ&hl=en" target="_blank"
-                        aria-label="Google Scholar"><i class="ai ai-google-scholar ai-1x"></i></a>
-                    <!-- <a href="https://amr-farahat.github.io/" target="_blank" aria-label="Website"><i
-                            class="fas fa-globe"></i></a> -->
+            <div class="terminal-window reveal">
+                <div class="terminal-header">
+                    <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="terminal-title">bash — portfolio — 80x24</div>
+                    <div style="width: 50px;"></div>
                 </div>
-            </div>
-            <div class="hero-image-wrapper reveal">
-                <img src="images/profile.jpg" alt="Dr. Amr Farahat" class="hero-image">
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt"></span><span class="command">whoami</span>
+                    </div>
+                    <div class="hero-info">
+                        <p><span class="keyword">class</span> <span class="func">Researcher</span> {</p>
+                        <p style="padding-left: 20px;"><span class="variable">name</span>: <span class="str">"Dr. Amr Farahat, MD, PhD"</span>;</p>
+                        <p style="padding-left: 20px;"><span class="variable">role</span>: <span class="str">"Data Science Engineer & NeuroAI Researcher"</span>;</p>
+                        <p style="padding-left: 20px;"><span class="variable">mission</span>: <span class="str">"Decoding the brain via AI"</span>;</p>
+                        <p>}</p>
+                    </div>
+                    <div class="terminal-line" style="margin-top: 20px;">
+                        <span class="prompt"></span><span class="typed-text" id="typewriter"></span><span class="cursor"></span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="mailto:amr.f.farahat@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/amr-farahat-738595151/" target="_blank"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/amr-farahat" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://scholar.google.com/citations?user=cY_w0CIAAAAJ&hl=en" target="_blank"
+                            aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- About / Education Section -->
         <section id="education" class="container">
-            <div class="section-header reveal">
-                <h2>Education</h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>PhD - International Max Planck Research School for Neural Circuits</h3>
-                        <h4>Frankfurt, Germany / Nijmegen, Netherlands</h4>
-                        <span class="date">2020 – 2025</span>
-                        <p>Donders Centre for Neuroscience, Radboud University</p>
-                        <p>Ernst Strüngmann Institute for Neuroscience in Cooperation with Max Planck Society</p>
-                        <p><strong>Thesis:</strong> On the predictive and explanative roles of deep neural networks in
-                            neuroscience.</p>
+            <div class="editor-frame reveal">
+                <div class="editor-header">
+                    <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
                     </div>
+                    <div class="editor-title">education.ts</div>
                 </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>MSc - Integrative Neurosciences</h3>
-                        <h4>Otto von Guericke University, Magdeburg, Germany</h4>
-                        <span class="date">2015 – 2018</span>
-                        <p><strong>Thesis:</strong> Deep Learning for EEG Decoding and Automatic Feature Discovery.</p>
-                        <!-- <p><strong>Grade:</strong> With distinction (1.2)</p> -->
+                <div class="editor-body">
+                    <div class="line-numbers">
+                        01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18
                     </div>
-                </div>
+                    <div class="editor-content">
+                        <div class="section-header">
+                            <h2>Education</h2>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>MD - Medical School</h3>
-                        <h4>Mansoura University, Mansoura, Egypt</h4>
-                        <span class="date">2007 - 2014</span>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>PhD - Neural Circuits</h3>
+                                    <h4>Max Planck Institute, Frankfurt / Radboud University</h4>
+                                    <span class="date">2020 – 2025</span>
+                                    <p class="comment">// Thesis: On the predictive and explanative roles of deep neural networks in neuroscience.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>MSc - Integrative Neurosciences</h3>
+                                    <h4>Otto von Guericke University, Magdeburg, Germany</h4>
+                                    <span class="date">2015 – 2018</span>
+                                    <p class="comment">// Thesis: Deep Learning for EEG Decoding and Automatic Feature Discovery.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>MD - Medical School</h3>
+                                    <h4>Mansoura University, Mansoura, Egypt</h4>
+                                    <span class="date">2007 - 2014</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer">}</div>
                     </div>
                 </div>
             </div>
@@ -113,88 +141,62 @@
 
         <!-- Experience Section -->
         <section id="experience" class="container">
-            <div class="section-header reveal">
-                <h2>Experience</h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>Data Science Engineer</h3>
-                        <h4>Green Fusion, Berlin, Germany</h4>
-                        <span class="date">2025 - Present</span>
+            <div class="editor-frame reveal">
+                <div class="editor-header">
+                    <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
                     </div>
+                    <div class="editor-title">experience.log</div>
                 </div>
-
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>PhD Researcher</h3>
-                        <h4>Ernst Strüngmann Institute for Neuroscience in Cooperation with Max Planck Society,
-                            Frankfurt, Germany</h4>
-                        <span class="date">2020 - 2025</span>
+                <div class="editor-body">
+                    <div class="line-numbers">
+                        01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11<br>12<br>13<br>14<br>15<br>16
                     </div>
-                </div>
+                    <div class="editor-content">
+                        <div class="section-header">
+                            <h2>Experience</h2>
+                        </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>Predoctoral Researcher</h3>
-                        <h4>Max Planck Institute for Brain Research & Frankfurt Institute for Advanced Studies,
-                            Frankfurt, Germany</h4>
-                        <span class="date">2019 - 2020</span>
-                    </div>
-                </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Data Science Engineer</h3>
+                                    <h4>Green Fusion, Berlin, Germany</h4>
+                                    <span class="date">[2025 - PRESENT]</span>
+                                </div>
+                            </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>Neuroradiology Resident Doctor</h3>
-                        <h4>Otto von Guericke University Hospital, Magdeburg, Germany</h4>
-                        <span class="date">2019</span>
-                    </div>
-                </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>PhD Researcher</h3>
+                                    <h4>Ernst Strüngmann Institute / Max Planck Society</h4>
+                                    <span class="date">[2020 - 2025]</span>
+                                </div>
+                            </div>
 
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass-card">
-                        <h3>General Practitioner</h3>
-                        <h4>Ministry Of Health and Population, Ras Ghareb, Egypt</h4>
-                        <span class="date">2015</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Predoctoral Researcher</h3>
+                                    <h4>MPI for Brain Research & FIAS, Frankfurt</h4>
+                                    <span class="date">[2019 - 2020]</span>
+                                </div>
+                            </div>
 
-        <!-- Skills Section -->
-        <section id="skills" class="container">
-            <div class="section-header reveal">
-                <h2>Skills & Languages</h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="skills-container reveal">
-                <div class="skill-category glass-card">
-                    <h3>Technical Skills</h3>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Tensorflow</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">Matlab</span>
-                        <span class="tag">EEG Analysis</span>
-                        <span class="tag">fMRI Analysis</span>
-                    </div>
-                </div>
-
-                <div class="skill-category glass-card">
-                    <h3>Languages</h3>
-                    <div class="tags">
-                        <span class="tag">Arabic (Native)</span>
-                        <span class="tag">English (TOEFL 109)</span>
-                        <span class="tag">German (C1)</span>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Neuroradiology Resident Doctor</h3>
+                                    <h4>Otto von Guericke University Hospital</h4>
+                                    <span class="date">[2019]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-footer">}</div>
                     </div>
                 </div>
             </div>
@@ -204,248 +206,203 @@
         <section id="projects" class="container">
             <div class="section-header reveal">
                 <h2>Projects</h2>
-                <div class="line"></div>
             </div>
 
             <div class="projects-grid">
-                <div class="project-card glass-card reveal">
-                    <img src="images/project_eeg.png" alt="Brain Computer Interface Project" class="project-image">
-                    <h3>Deep Learning for EEG Decoding and Automatic Feature Discovery</h3>
-                    <p>Developed CNN models for classifying P300 ERP component in EEG data for a Brain Computer
-                        Interface (BCI) speller application. Used saliency maps to extract relevant spatial and temporal
-                        EEG features.</p>
-                    <div class="project-links">
-                        <a href="https://doi.org/10.1088/1741-2552/ab3bb4" target="_blank"><i
-                                class="fas fa-file-alt"></i>Paper</a>
-                        <a href="https://doi.org/10.1101/614784" target="_blank"><i
-                                class="fas fa-file-pdf"></i>Preprint</a>
-                        <a href="http://doi.org/10.12751/nncn.bc2018.0092" target="_blank"><i
-                                class="fas fa-book-open"></i>Abstract</a>
-                        <a href="https://github.com/amr-farahat/BCI-P300" target="_blank"><i
-                                class="fab fa-github"></i>Code</a>
-                        <a href="http://bit.ly/2PdqhcG" target="_blank"><i class="fas fa-image"></i>Poster</a>
-                        <a href="http://bit.ly/2Xi8cOA" target="_blank"><i class="fas fa-graduation-cap"></i>Master
-                            Thesis</a>
+                <div class="project-card reveal">
+                    <div class="project-file-header">
+                        <i class="fas fa-file-code"></i> eeg_decoding.py
                     </div>
-                    <div class="tags">
-                        <span class="tag small">Python</span>
-                        <span class="tag small">Tensorflow</span>
-                        <span class="tag small">EEG</span>
+                    <div class="project-card-body">
+                        <img src="images/project_eeg.png" alt="Brain Computer Interface Project" class="project-image">
+                        <h3>Deep Learning for EEG Decoding</h3>
+                        <p>Developed CNN models for classifying P300 ERP component in EEG data. Used saliency maps for feature discovery.</p>
+                        <div class="project-links">
+                            <a href="https://doi.org/10.1088/1741-2552/ab3bb4" target="_blank">paper.pdf</a>
+                            <a href="https://github.com/amr-farahat/BCI-P300" target="_blank">source_code</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Tensorflow</span>
+                            <span class="tag">EEG</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card glass-card reveal">
-                    <img src="images/project_epilepsy.png" alt="Deep Anomaly Detection" class="project-image">
-                    <h3>Diagnosing Epileptogenesis with Deep Anomaly Detection</h3>
-                    <p>Used data from a rodent epilepsy model to show the feasibility of an unsupervised deep anomaly
-                        detection framework using adversarial autoencoders to detect subtle changes in brain electrical
-                        activity.</p>
-                    <div class="project-links">
-                        <a href="https://static1.squarespace.com/static/59d5ac1780bd5ef9c396eda6/t/62e97661b4dffb7f5e539e1f/1659467365616/50+MLHC_2022.pdf"
-                            target="_blank"><i class="fas fa-file-alt"></i>Paper</a>
-                        <a href="https://doi.org/10.1016/j.clinph.2021.02.327" target="_blank"><i
-                                class="fas fa-book-open"></i>Abstract</a>
-                        <a href="https://github.com/amr-farahat/Epileptogenesis" target="_blank"><i
-                                class="fab fa-github"></i>Code</a>
-                        <a href="https://www.youtube.com/watch?v=Z60nfNQQizI" target="_blank"><i
-                                class="fas fa-video"></i>Video</a>
+                <div class="project-card reveal">
+                    <div class="project-file-header">
+                        <i class="fas fa-file-code"></i> epileptogenesis_detection.py
                     </div>
-                    <div class="tags">
-                        <span class="tag small">Python</span>
-                        <span class="tag small">Tensorflow</span>
-                        <span class="tag small">iEEG</span>
+                    <div class="project-card-body">
+                        <img src="images/project_epilepsy.png" alt="Deep Anomaly Detection" class="project-image">
+                        <h3>Diagnosing Epileptogenesis</h3>
+                        <p>Unsupervised deep anomaly detection using adversarial autoencoders to detect changes in brain activity.</p>
+                        <div class="project-links">
+                            <a href="https://www.mlforhc.org/s/50-MLHC_2022.pdf" target="_blank">paper.pdf</a>
+                            <a href="https://github.com/amr-farahat/Epileptogenesis" target="_blank">source_code</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Tensorflow</span>
+                            <span class="tag">AnomalyDetection</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card glass-card reveal">
-                    <img src="images/project_cnn.png" alt="Feature Scrambling in CNNs" class="project-image">
-                    <h3>Spatial Relations and Feature-Scrambling in CNNs</h3>
-                    <p>Developed a feature-scrambling approach to investigate the granularity of features used by CNNs
-                        for object recognition and whether they encode spatial relations among features.</p>
-                    <div class="project-links">
-                        <a href="https://doi.org/10.1016/j.neunet.2023.08.021" target="_blank"><i
-                                class="fas fa-file-alt"></i>Paper</a>
-                        <a href="http://doi.org/10.12751/nncn.bc2022.285" target="_blank"><i
-                                class="fas fa-book-open"></i>Abstract</a>
-                        <a href="https://drive.google.com/file/d/1kju7cCJdu75lxCfE0A0aSxJD6m6DI3pk/view?usp=sharing"
-                            target="_blank"><i class="fas fa-image"></i>Poster</a>
+                <div class="project-card reveal">
+                    <div class="project-file-header">
+                        <i class="fas fa-file-code"></i> cnn_spatial_relations.py
                     </div>
-                    <div class="tags">
-                        <span class="tag small">Python</span>
-                        <span class="tag small">Tensorflow</span>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card reveal">
-                    <img src="images/project_fmri.png" alt="fMRI and CNNs" class="project-image">
-                    <h3>Predicting Neural Responses with Random-Weight CNNs</h3>
-                    <p>Evaluated how well untrained and trained CNNs predict neural activity across the visual cortex in
-                        humans and monkeys, varying architectural components.</p>
-                    <div class="project-links">
-                        <a href="https://doi.org/10.1101/2025.02.05.636721" target="_blank"><i
-                                class="fas fa-file-pdf"></i>Preprint</a>
-                        <a href="https://drive.google.com/file/d/1yEdlB-qG0iY3jfaXvx4zGsO89ZDVC0gq/view?usp=sharing"
-                            target="_blank"><i class="fas fa-image"></i>Poster</a>
-                    </div>
-                    <div class="tags">
-                        <span class="tag small">Python</span>
-                        <span class="tag small">Tensorflow</span>
-                        <span class="tag small">fMRI</span>
-                        <span class="tag small">Electrophysiology</span>
+                    <div class="project-card-body">
+                        <img src="images/project_cnn.png" alt="Feature Scrambling in CNNs" class="project-image">
+                        <h3>Spatial Relations in CNNs</h3>
+                        <p>Feature-scrambling approach to investigate how CNNs encode spatial relations among features.</p>
+                        <div class="project-links">
+                            <a href="https://doi.org/10.1016/j.neunet.2023.08.021" target="_blank">paper.pdf</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">DeepLearning</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card glass-card reveal">
-                    <img src="images/project_motor.png" alt="7T fMRI Motor Learning" class="project-image">
-                    <h3>Investigating motor learning circuitry in a 7T functional connectivity fMRI study</h3>
-                    <p>Investigated the neural circuitry underlying motor learning utilizing high-resolution 7T
-                        functional connectivity fMRI to observe dynamic changes in brain networks.</p>
-                    <div class="project-links">
-                        <a href="https://doi.org/10.1002/hbm.25989" target="_blank"><i class="fas fa-file-alt"></i>Paper
-                            1</a>
-                        <a href="https://doi.org/10.1007/s12311-022-01487-0" target="_blank"><i
-                                class="fas fa-file-alt"></i>Paper 2</a>
-                        <a href="https://www.youtube.com/watch?v=C4-bjGCcmNc" target="_blank"><i
-                                class="fas fa-video"></i>Talk</a>
-                        <a href="https://drive.google.com/file/d/1Q-sLUaqV7esy4qhRO0CP03MQ0JW6Gv2H/view?usp=sharing"
-                            target="_blank"><i class="fas fa-image"></i>Poster 1</a>
-                        <a href="http://bit.ly/neurorad555" target="_blank"><i class="fas fa-image"></i>Poster 2</a>
+                <div class="project-card reveal">
+                    <div class="project-file-header">
+                        <i class="fas fa-file-code"></i> neural_prediction.py
                     </div>
-                    <div class="tags">
-                        <span class="tag small">Python</span>
-                        <span class="tag small">fMRI</span>
+                    <div class="project-card-body">
+                        <img src="images/project_fmri.png" alt="fMRI and CNNs" class="project-image">
+                        <h3>Predicting Neural Responses</h3>
+                        <p>Evaluating untrained and trained CNNs for predicting neural activity across the visual cortex.</p>
+                        <div class="project-links">
+                            <a href="https://doi.org/10.1101/2025.02.05.636721" target="_blank">preprint.pdf</a>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">fMRI</span>
+                            <span class="tag">Electrophysiology</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="section-footer" style="margin-top: 40px;">}</div>
         </section>
 
         <!-- Publications Section -->
         <section id="publications" class="container">
-            <div class="section-header reveal">
-                <h2>Selected Publications</h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="publications-list">
-                <div class="publication-item glass-card reveal">
-                    <p>J. Liu, <strong>A. Farahat</strong>, and M. Vinck, "Representational drift shows same-class
-                        acceleration in visual cortex and artificial neural networks," bioRxiv, 2025.
-                        <br><a href="https://doi.org/10.1101/2025.11.05.686897" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1101/2025.11.05.686897</a>
-                    </p>
+            <div class="editor-frame reveal">
+                <div class="editor-header">
+                    <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="editor-title">publications.bib</div>
                 </div>
+                <div class="editor-body">
+                    <div class="line-numbers">
+                        01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11<br>12
+                    </div>
+                    <div class="editor-content">
+                        <div class="section-header">
+                            <h2>Selected Publications</h2>
+                        </div>
 
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong> and M. Vinck, "Neural responses in early, but not late, visual cortex
-                        are well predicted by random-weight CNNs with sufficient model complexity," bioRxiv, 2025.
-                        <br><a href="https://doi.org/10.1101/2025.02.05.636721" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1101/2025.02.05.636721</a>
-                    </p>
-                </div>
-
-                <div class="publication-item glass-card reveal">
-                    <p>A. Voegtle, L. Terzic, <strong>A. Farahat</strong>, et al., "Ventrointermediate thalamic
-                        stimulation improves motor learning in humans," Communications Biology, vol. 7, no. 1, p. 798,
-                        2024.
-                        <br><a href="https://doi.org/10.1038/s42003-024-06462-5" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1038/s42003-024-06462-5</a>
-                    </p>
-                </div>
-
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong>, F. Effenberger, and M. Vinck, "A novel feature-scrambling approach
-                        reveals the capacity of convolutional neural networks to learn spatial relations," Neural
-                        Networks, vol. 167, pp. 400–414, 2023.
-                        <br><a href="https://doi.org/10.1016/j.neunet.2023.08.021" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI:
-                            10.1016/j.neunet.2023.08.021</a>
-                    </p>
-                </div>
-
-                <div class="publication-item glass-card reveal">
-                    <p>L. Terzic, A. Voegtle, <strong>A. Farahat</strong>, et al., "Deep brain stimulation of the
-                        ventrointermediate nucleus of the thalamus to treat essential tremor improves motor sequence
-                        learning," Human Brain Mapping, 2022.
-                        <br><a href="https://doi.org/10.1002/hbm.25989" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1002/hbm.25989</a>
-                    </p>
-                </div>
-
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong>, D. Lu, S. Bauer, et al., "Diagnosing epileptogenesis with deep
-                        anomaly detection," Proceedings of the 7th Machine Learning for Healthcare Conference, vol. 182,
-                        2022.
-                        <br><a href="https://www.mlforhc.org/s/50-MLHC_2022.pdf" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>PMLR 182:1-18 (PDF)</a>
-                    </p>
-                </div>
-
-                <div class="publication-item glass-card reveal">
-                    <p><strong>A. Farahat</strong>, C. Reichert, C. M. Sweeney-Reed, and H. Hinrichs, "Convolutional
-                        neural networks for decoding of covert attention focus and saliency maps for EEG feature
-                        visualization," Journal of neural engineering, vol. 16, no. 6, 2019.
-                        <br><a href="https://doi.org/10.1088/1741-2552/ab3bb4" target="_blank"
-                            style="color: var(--accent-3); text-decoration: none;"><i class="fas fa-external-link-alt"
-                                style="font-size: 0.8rem; margin-right: 0.4rem;"></i>DOI: 10.1088/1741-2552/ab3bb4</a>
-                    </p>
+                        <div class="publications-list">
+                            <div class="publication-item">
+                                <p>@article{Liu2025,<br>
+                                  &nbsp;&nbsp;title={Representational drift shows same-class acceleration},<br>
+                                  &nbsp;&nbsp;author={Liu, J. and Farahat, A. and Vinck, M.},<br>
+                                  &nbsp;&nbsp;journal={bioRxiv},<br>
+                                  &nbsp;&nbsp;year={2025}<br>
+                                }</p>
+                            </div>
+                            <div class="publication-item">
+                                <p>@article{Farahat2023,<br>
+                                  &nbsp;&nbsp;title={Feature-scrambling approach reveals CNN capacity},<br>
+                                  &nbsp;&nbsp;author={Farahat, A. and Effenberger, F. and Vinck, M.},<br>
+                                  &nbsp;&nbsp;journal={Neural Networks},<br>
+                                  &nbsp;&nbsp;year={2023}<br>
+                                }</p>
+                            </div>
+                        </div>
+                        <div class="section-footer">}</div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Qualifications Section -->
         <section id="qualifications" class="container">
-            <div class="section-header reveal">
-                <h2>Further Qualifications</h2>
-                <div class="line"></div>
-            </div>
+            <div class="editor-frame reveal">
+                <div class="editor-header">
+                    <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="editor-title">skills.json</div>
+                </div>
+                <div class="editor-body">
+                    <div class="line-numbers">
+                        01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11<br>12<br>13<br>14<br>15
+                    </div>
+                    <div class="editor-content">
+                        <div class="section-header">
+                            <h2>Skills & Qualifications</h2>
+                        </div>
 
-            <div class="qualifications-grid">
-                <div class="qual-item glass-card reveal">
-                    <h4>The Machine Learning Summer School</h4>
-                    <p>Okinawa, Japan | 2024</p>
+                        <div style="margin-bottom: 2rem;">
+                            <span class="keyword">"technical_skills"</span>: [
+                            <div class="tags" style="padding-left: 20px; margin-top: 5px;">
+                                <span class="tag">Python</span>
+                                <span class="tag">Tensorflow</span>
+                                <span class="tag">ComputerVision</span>
+                                <span class="tag">DeepLearning</span>
+                                <span class="tag">EEG_Analysis</span>
+                                <span class="tag">fMRI_Analysis</span>
+                            </div>
+                            ],
+                        </div>
+
+                        <div class="qualifications-grid">
+                            <div class="qual-item">
+                                <h4>Machine Learning Summer School</h4>
+                                <p>Okinawa, Japan | 2024</p>
+                            </div>
+                            <div class="qual-item">
+                                <h4>Systems Vision Science</h4>
+                                <p>Tübingen, Germany | 2023</p>
+                            </div>
+                            <div class="qual-item">
+                                <h4>Computational Neuroscience Imbizo</h4>
+                                <p>Cape Town, South Africa | 2022</p>
+                            </div>
+                        </div>
+                        <div class="section-footer">}</div>
+                    </div>
                 </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>The Systems Vision Science Summer School</h4>
-                    <p>Tübingen, Germany | 2023</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <div class="terminal-window reveal" style="max-width: 600px; margin: 0 auto;">
+                <div class="terminal-header">
+                    <div class="terminal-title">contact — amr@portfolio</div>
                 </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>IBRO-Simons Computational Neuroscience Imbizo</h4>
-                    <p>Cape Town, South Africa | 2022</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>FENS Summer School on Artificial and Natural Computations</h4>
-                    <p>Bertinoro, Italy | 2022</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>Eastern European Machine Learning Summer School (EEML)</h4>
-                    <p>A deep learning and reinforcement learning summer school | 2021</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>Neuromatch Academy (Interactive Track)</h4>
-                    <p>An online school for Computational Neuroscience | 2020</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>International Startup School</h4>
-                    <p>TUGZ, Otto von Gureicke University, Germany | 2018</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>Business Planning Course</h4>
-                    <p>Chair of Entrepreneurship, Otto von Gureicke University, Germany | 2018</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>5th Human Brain Project winter school: Future Medicine</h4>
-                    <p>Obegugl, Austria — Influencing clinical diagnoses and treatments by data mining analysis- and
-                        modeling-driven neuroscience | 2017</p>
-                </div>
-                <div class="qual-item glass-card reveal">
-                    <h4>4th Human Brain Project summer school: Future Computing</h4>
-                    <p>Obegugl, Austria — Brain Science and Artificial Intelligence | 2017</p>
+                <div class="terminal-body" style="min-height: 150px;">
+                    <div class="terminal-line">
+                        <span class="prompt"></span><span class="command">send_message --to "Amr Farahat"</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <p style="color: var(--comment);">// Click an option below to initiate transmission</p>
+                        <div class="social-links" style="margin-top: 15px; justify-content: center;">
+                            <a href="mailto:amr.f.farahat@gmail.com" title="Email"><i class="fas fa-envelope"></i> mail</a>
+                            <a href="https://www.linkedin.com/in/amr-farahat-738595151/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i> linkedin</a>
+                            <a href="https://github.com/amr-farahat" target="_blank" title="GitHub"><i class="fab fa-github"></i> github</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -453,8 +410,9 @@
     </main>
 
     <footer>
-        <div class="container container-footer">
-            <p>&copy; 2026 Amr Farahat</p>
+        <div class="container">
+            <p>&gt; amr --version 2.0.0</p>
+            <p>&copy; 2026 Amr Farahat | Built with &lt;3 and Code</p>
         </div>
     </footer>
 
