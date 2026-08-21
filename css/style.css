@@ -309,6 +309,11 @@ h2 {
         gap: 20px;
     }
 
+    .portrait {
+        align-self: center;
+        text-align: center;
+    }
+
     .portrait img {
         width: 140px;
         height: 140px;
