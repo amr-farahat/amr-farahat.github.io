@@ -14,6 +14,16 @@
         "Liberation Mono", monospace;
 }
 
+/* light mode — activated via data-theme="light" on <html> */
+html[data-theme="light"] {
+    --bg: #fafbfc;
+    --text: #24292f;
+    --bright: #0d1117;
+    --muted: #57606a;
+    --accent: #1a7f37;
+    --border: #d0d7de;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -85,6 +95,23 @@ strong {
 
 .nav a:hover {
     color: var(--accent);
+}
+
+.theme-toggle {
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--border);
+    padding: 0 8px;
+    cursor: pointer;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* ---------- sections ---------- */
