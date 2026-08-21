@@ -74,7 +74,7 @@ strong {
     flex-wrap: wrap;
     align-items: baseline;
     gap: 6px 24px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .logo {
