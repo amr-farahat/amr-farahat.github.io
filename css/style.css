@@ -196,12 +196,6 @@ h2 {
     border: 1px solid var(--border);
 }
 
-.portrait figcaption {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 6px;
-}
-
 .whoami {
     font-family: inherit;
     white-space: pre-wrap;
