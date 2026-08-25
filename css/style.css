@@ -356,8 +356,9 @@ h2 {
     }
 
     .contact li {
-        flex-direction: column;
-        gap: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2px 12px;
     }
 
     .key {
