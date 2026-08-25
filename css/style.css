@@ -362,6 +362,6 @@ h2 {
     }
 
     .key {
-        min-width: 0;
+        min-width: 76px;
     }
 }
