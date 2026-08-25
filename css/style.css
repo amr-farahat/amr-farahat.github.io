@@ -220,6 +220,14 @@ h2 {
     align-items: baseline;
 }
 
+.contact .icon {
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+    margin-right: 6px;
+    vertical-align: -1px;
+}
+
 .key {
     display: inline-block;
     min-width: 84px;
